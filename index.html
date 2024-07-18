@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | QR code component</title>
+        <!-- Tailwind CDN -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "x-slate": {
+                                300: "#D5E1EF",
+                                500: "#68778D",
+                                900: "#1F314F",
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style type="text/tailwindcss">
+            @layer components {
+                body {
+                    font-family: "Outfit", sans-serif;
+                }
+                .title {
+                    @apply font-semibold text-[22px];
+                    line-height: 120%;
+                }
+                .desc {
+                    @apply font-light text-[15px];
+                    letter-spacing: 0.2px;
+                    line-height: 140%;
+                }
+            }
+        </style>
+    </head>
+    <body class="grid place-items-center h-screen bg-x-slate-300">
+        <article
+            class="w-80 rounded-[20px] p-4 gap-6 pb-10 bg-white flex flex-col items-center"
+            style="box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0477)"
+        >
+            <img
+                src="./images/image-qr-code.png"
+                class="w-full rounded-[10px]"
+                alt=""
+            />
+            <div class="flex flex flex-col px-4 gap-4 text-center">
+                <h1 class="title text-x-slate-900">
+                    Improve your front-end skills by building projects
+                </h1>
+                <p class="desc text-x-slate-500">
+                    Scan the QR code to visit Frontend Mentor and take your
+                    coding skills to the next level
+                </p>
+            </div>
+        </article>
+    </body>
+</html>
